@@ -1,4 +1,5 @@
 package org.example;
 
-public class Bonus {
+public abstract class Bonus {
+
 }
