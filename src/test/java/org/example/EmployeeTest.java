@@ -1,7 +1,20 @@
 package org.example;
 
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
+import static org.assertj.core.api.Assertions.assertThat;
+class EmployeeTest
+{
+    private Employee employee;
+    @BeforeEach
+    void setUp()
+    {
+        employee = new Employee("Hans", "Müller", 0, 0, 0, 0, false);
+    }
 
-class EmployeeTest {
-
+    @Test
+    void getFirstname()
+    {
+        assertThat(employee.getFirstname()).isEqualTo("Hans");
+    }
 }
