@@ -3,6 +3,8 @@ package org.example;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.jupiter.api.Assertions.assertThrows;
+
 class EmployeeTest
 {
     private Employee employee;
@@ -119,9 +121,10 @@ class EmployeeTest
     }
 
     @Test
-    void testCheckValidCompanyAffiliation()
+    void testThrowsWhenCompanyAffiliationToLow()
     {
-        assertThat(employee.checkValidValues(-1, 0, 0, 0)).isFalse();
+        assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(-1, 0, 0, 0));
+        //assertThat(employee.checkValidValues(-1, 0, 0, 0)).isFalse();
     }
 
 }
