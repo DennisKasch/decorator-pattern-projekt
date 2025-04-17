@@ -14,11 +14,12 @@ public class Employee {
     }
     public String getFirstname()
     {
-        return "Hans";
+        return firstname;
     }
 
     public void setFirstname(String firstname)
     {
+        this.firstname = firstname;
     }
 
     public String getLastname()
