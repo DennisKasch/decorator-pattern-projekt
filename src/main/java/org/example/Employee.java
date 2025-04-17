@@ -2,4 +2,76 @@ package org.example;
 
 public class Employee {
 
+    private String firstname;
+    private String lastname;
+    private int companyAffiliation;
+    private int performance;
+    private int completedProjects;
+    private int daysAbsent;
+    private boolean isTeamleader;
+
+    public Employee(String firstname, String lastname, int companyAffiliation, int performance, int completedProjects, int daysAbsent, boolean isTeamleader) {
+    }
+    public String getFirstname()
+    {
+        return "";
+    }
+
+    public void setFirstname(String firstname)
+    {
+    }
+
+    public String getLastname()
+    {
+        return "";
+    }
+
+    public void setLastname(String lastname)
+    {
+    }
+
+    public int getCompanyAffiliation()
+    {
+        return 0;
+    }
+
+    public void setCompanyAffiliation(int companyAffiliation)
+    {
+    }
+
+    public int getPerformance()
+    {
+        return 0;
+    }
+
+    public void setPerformance(int performance)
+    {
+    }
+
+    public int getCompletedProjects()
+    {
+        return 0;
+    }
+
+    public void setCompletedProjects(int completedProjects)
+    {
+    }
+
+    public int getDaysAbsent()
+    {
+        return 0;
+    }
+
+    public void setDaysAbsent(int daysAbsent)
+    {
+    }
+
+    public boolean isTeamleader()
+    {
+        return false;
+    }
+
+    public void setTeamleader(boolean teamleader)
+    {
+    }
 }
