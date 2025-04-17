@@ -64,11 +64,12 @@ public class Employee {
 
     public int getDaysAbsent()
     {
-        return 100;
+        return daysAbsent;
     }
 
     public void setDaysAbsent(int daysAbsent)
     {
+        this.daysAbsent = daysAbsent;
     }
 
     public boolean isTeamleader()

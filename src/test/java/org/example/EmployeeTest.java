@@ -51,6 +51,7 @@ class EmployeeTest
     @Test
     void testGetDaysAbsent()
     {
+        employee.setDaysAbsent(100);
         assertThat(employee.getDaysAbsent()).isEqualTo(100);
     }
 
