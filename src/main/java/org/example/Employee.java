@@ -14,7 +14,7 @@ public class Employee {
     }
     public String getFirstname()
     {
-        return "";
+        return "Hans";
     }
 
     public void setFirstname(String firstname)
