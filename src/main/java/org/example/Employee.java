@@ -94,7 +94,8 @@ public class Employee {
     {
         boolean cA = companyAffiliation < 0 || companyAffiliation > 50;
         boolean p = performance < 0 || performance > 10;
-        if(cA || p)
+        boolean cP = completedProjects < 0;
+        if(cA || p || cP)
         {
             throw new IllegalArgumentException("companyAffiliation out of range");
         }
