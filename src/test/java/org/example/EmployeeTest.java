@@ -36,6 +36,7 @@ class EmployeeTest
     @Test
     void testGetPerformance()
     {
+        employee.setPerformance(1);
         assertThat(employee.getPerformance()).isEqualTo(1);
     }
 

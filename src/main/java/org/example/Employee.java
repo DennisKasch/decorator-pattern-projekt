@@ -44,11 +44,12 @@ public class Employee {
 
     public int getPerformance()
     {
-        return 1;
+        return performance;
     }
 
     public void setPerformance(int performance)
     {
+        this.performance = performance;
     }
 
     public int getCompletedProjects()
