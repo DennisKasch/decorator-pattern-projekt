@@ -74,10 +74,11 @@ public class Employee {
 
     public boolean isTeamleader()
     {
-        return true;
+        return isTeamleader;
     }
 
     public void setTeamleader(boolean teamleader)
     {
+        this.isTeamleader = teamleader;
     }
 }

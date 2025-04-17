@@ -58,6 +58,7 @@ class EmployeeTest
     @Test
     void testIsTeamleader()
     {
+        employee.setTeamleader(true);
         assertThat(employee.isTeamleader()).isTrue();
     }
 
