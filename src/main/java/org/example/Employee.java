@@ -32,7 +32,7 @@ public class Employee {
 
     public int getCompanyAffiliation()
     {
-        return 0;
+        return 7;
     }
 
     public void setCompanyAffiliation(int companyAffiliation)
