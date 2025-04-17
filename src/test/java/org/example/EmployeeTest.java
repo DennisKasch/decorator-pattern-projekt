@@ -36,6 +36,7 @@ class EmployeeTest
     @Test
     void testGetCompletedProjects()
     {
+        employee.setCompletedProjects(3);
         assertThat(employee.getCompletedProjects()).isEqualTo(3);
     }
 

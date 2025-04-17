@@ -53,11 +53,12 @@ public class Employee {
 
     public int getCompletedProjects()
     {
-        return 3;
+        return completedProjects;
     }
 
     public void setCompletedProjects(int completedProjects)
     {
+        this.completedProjects = completedProjects;
     }
 
     public int getDaysAbsent()
