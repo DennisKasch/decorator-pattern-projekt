@@ -81,6 +81,13 @@ class EmployeeTest
     }
 
     @Test
+    void testSetPerformance()
+    {
+        employee.setPerformance(5);
+        assertThat(employee.getPerformance()).isEqualTo(5);
+    }
+
+    @Test
     void testSetCompletedProjects()
     {
         employee.setCompletedProjects(10);
