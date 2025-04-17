@@ -89,4 +89,9 @@ public class Employee {
     {
         this.isTeamleader = teamleader;
     }
+
+    public boolean checkValidValues(int companyAffiliation, int performance, int completedProjects,  int daysAbsent)
+    {
+       return false;
+    }
 }

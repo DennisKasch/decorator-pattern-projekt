@@ -111,4 +111,11 @@ class EmployeeTest
         assertThat(employee.isTeamleader()).isFalse();
     }
 
+    @Test
+    void testCheckValidValues()
+    {
+        assertThat(employee.checkValidValues(0,0,0,0 )).isTrue() ;
+
+    }
+
 }
