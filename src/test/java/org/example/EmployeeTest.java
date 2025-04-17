@@ -30,4 +30,10 @@ class EmployeeTest
         assertThat(employee.getCompanyAffiliation()).isEqualTo(7);
     }
 
+    @Test
+    void testGetCompletedProjects()
+    {
+        assertThat(employee.getCompletedProjects()).isEqualTo(3);
+    }
+
 }
