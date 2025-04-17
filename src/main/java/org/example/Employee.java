@@ -10,7 +10,15 @@ public class Employee {
     private int daysAbsent;
     private boolean isTeamleader;
 
-    public Employee(String firstname, String lastname, int companyAffiliation, int performance, int completedProjects, int daysAbsent, boolean isTeamleader) {
+    public Employee(String firstname, String lastname, int companyAffiliation, int performance, int completedProjects, int daysAbsent, boolean isTeamleader)
+    {
+        this.firstname = firstname;
+        this.lastname = lastname;
+        this.companyAffiliation = companyAffiliation;
+        this.performance = performance;
+        this.completedProjects = completedProjects;
+        this.daysAbsent = daysAbsent;
+        this.isTeamleader = isTeamleader;
     }
     public String getFirstname()
     {
