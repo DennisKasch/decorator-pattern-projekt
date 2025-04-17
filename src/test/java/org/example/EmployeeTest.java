@@ -65,4 +65,11 @@ class EmployeeTest
         assertThat(employee.getLastname()).isEqualTo("Schmidt");
     }
 
+    @Test
+    void testSetCompanyAffiliation()
+    {
+        employee.setCompanyAffiliation(35);
+        assertThat(employee.getCompanyAffiliation()).isEqualTo(35);
+    }
+
 }
