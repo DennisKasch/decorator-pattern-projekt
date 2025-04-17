@@ -36,4 +36,11 @@ class EmployeeTest
         assertThat(employee.getCompletedProjects()).isEqualTo(3);
     }
 
+
+    @Test
+    void testGetDaysAbsent()
+    {
+        assertThat(employee.getDaysAbsent()).isEqualTo(100);
+    }
+
 }
