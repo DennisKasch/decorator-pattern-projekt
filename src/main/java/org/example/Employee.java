@@ -34,11 +34,12 @@ public class Employee {
 
     public int getCompanyAffiliation()
     {
-        return 7;
+        return companyAffiliation;
     }
 
     public void setCompanyAffiliation(int companyAffiliation)
     {
+        this.companyAffiliation = companyAffiliation;
     }
 
     public int getPerformance()

@@ -29,6 +29,7 @@ class EmployeeTest
     @Test
     void testGetCompanyAffiliation()
     {
+        employee.setCompanyAffiliation(7);
         assertThat(employee.getCompanyAffiliation()).isEqualTo(7);
     }
 
