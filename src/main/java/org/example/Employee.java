@@ -68,7 +68,7 @@ public class Employee {
 
     public boolean isTeamleader()
     {
-        return false;
+        return true;
     }
 
     public void setTeamleader(boolean teamleader)
