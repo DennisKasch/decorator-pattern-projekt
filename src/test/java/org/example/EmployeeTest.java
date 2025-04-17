@@ -22,6 +22,7 @@ class EmployeeTest
     @Test
     void testGetLastname()
     {
+        employee.setLastname("Müller");
         assertThat(employee.getLastname()).isEqualTo("Müller");
     }
 

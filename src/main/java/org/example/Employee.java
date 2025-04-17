@@ -24,11 +24,12 @@ public class Employee {
 
     public String getLastname()
     {
-        return "Müller";
+        return lastname;
     }
 
     public void setLastname(String lastname)
     {
+        this.lastname = lastname;
     }
 
     public int getCompanyAffiliation()
