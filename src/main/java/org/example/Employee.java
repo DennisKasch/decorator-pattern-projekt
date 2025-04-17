@@ -44,7 +44,7 @@ public class Employee {
 
     public int getPerformance()
     {
-        return 0;
+        return 1;
     }
 
     public void setPerformance(int performance)
