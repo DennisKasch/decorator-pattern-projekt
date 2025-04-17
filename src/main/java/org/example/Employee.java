@@ -92,10 +92,11 @@ public class Employee {
 
     public boolean checkValidValues(int companyAffiliation, int performance, int completedProjects,  int daysAbsent)
     {
-        if(companyAffiliation < 0)
+        if(companyAffiliation < 0 || companyAffiliation > 50)
         {
             throw new IllegalArgumentException("companyAffiliation out of range");
         }
+
        return true;
     }
 }
