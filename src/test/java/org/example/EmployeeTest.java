@@ -163,4 +163,9 @@ class EmployeeTest
         assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(0, 0 , 0, -1));
     }
 
+    @Test
+    void testThrowWhenDaysAbsentToHigh()
+    {
+        assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(0, 0 , 0, 31));
+    }
 }
