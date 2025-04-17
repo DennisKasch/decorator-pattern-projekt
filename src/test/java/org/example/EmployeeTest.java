@@ -34,6 +34,12 @@ class EmployeeTest
     }
 
     @Test
+    void testGetPerformance()
+    {
+        assertThat(employee.getPerformance()).isEqualTo(1);
+    }
+
+    @Test
     void testGetCompletedProjects()
     {
         employee.setCompletedProjects(3);
