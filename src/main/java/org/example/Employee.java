@@ -59,7 +59,7 @@ public class Employee {
 
     public int getDaysAbsent()
     {
-        return 0;
+        return 100;
     }
 
     public void setDaysAbsent(int daysAbsent)
