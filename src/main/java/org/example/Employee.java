@@ -23,7 +23,7 @@ public class Employee {
 
     public String getLastname()
     {
-        return "";
+        return "Müller";
     }
 
     public void setLastname(String lastname)
