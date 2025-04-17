@@ -13,8 +13,9 @@ class EmployeeTest
     }
 
     @Test
-    void getFirstname()
+    void testGetFirstname()
     {
         assertThat(employee.getFirstname()).isEqualTo("Hans");
     }
+
 }
