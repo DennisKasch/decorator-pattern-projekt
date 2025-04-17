@@ -103,4 +103,11 @@ class EmployeeTest
         assertThat(employee.getDaysAbsent()).isEqualTo(50);
     }
 
+    @Test
+    void testSetTeamleader()
+    {
+        employee.setTeamleader(false);
+        assertThat(employee.isTeamleader()).isFalse();
+    }
+
 }
