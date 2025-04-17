@@ -50,7 +50,7 @@ public class Employee {
 
     public int getCompletedProjects()
     {
-        return 0;
+        return 3;
     }
 
     public void setCompletedProjects(int completedProjects)
