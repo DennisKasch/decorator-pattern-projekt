@@ -151,4 +151,10 @@ class EmployeeTest
         assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(0, 0 , -1, 0));
     }
 
+    @Test
+    void testThrowWhenCompletedProjectsToHigh()
+    {
+        assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(0, 0 , 251, 0));
+    }
+
 }
