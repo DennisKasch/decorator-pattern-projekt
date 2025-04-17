@@ -118,4 +118,10 @@ class EmployeeTest
 
     }
 
+    @Test
+    void testCheckValidCompanyAffiliation()
+    {
+        assertThat(employee.checkValidValues(-1, 0, 0, 0)).isFalse();
+    }
+
 }
