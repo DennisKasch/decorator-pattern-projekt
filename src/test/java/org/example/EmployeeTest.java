@@ -49,4 +49,11 @@ class EmployeeTest
         assertThat(employee.isTeamleader()).isTrue();
     }
 
+    @Test
+    void testSetFirstname()
+    {
+        employee.setFirstname("Alice");
+        assertThat(employee.getFirstname()).isEqualTo("Alice");
+    }
+
 }
