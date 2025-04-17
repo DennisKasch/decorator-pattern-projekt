@@ -127,4 +127,10 @@ class EmployeeTest
         //assertThat(employee.checkValidValues(-1, 0, 0, 0)).isFalse();
     }
 
+    @Test
+    void testThrowsWhenCompanyAffiliationToHigh()
+    {
+        assertThrows(IllegalArgumentException.class, () -> employee.checkValidValues(51, 0, 0, 0));
+    }
+
 }
