@@ -10,11 +10,19 @@ class ProjectCompletionBonusTest
     @Test
     void testValidConstructor()
     {
-        double bonusValue = 50;
+        double bonusValue = 5;
         int completedProjectsValue = 20;
         ProjectCompletionBonus projectCompletionBonus = new ProjectCompletionBonus(bonusValue, completedProjectsValue);
 
         assertThat(projectCompletionBonus.getBonus()).isEqualTo(bonusValue);
         assertThat(projectCompletionBonus.getCompletedProjects()).isEqualTo(completedProjectsValue);
+    }
+
+    @Test
+    void testCalculateBonus_50CompletedProjects()
+    {
+        ProjectCompletionBonus projectCompletionBonus = new ProjectCompletionBonus(5, 50);
+
+        assertThat(projectCompletionBonus.calculateBonus()).isEqualTo(250);
     }
 }
