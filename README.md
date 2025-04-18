@@ -44,7 +44,7 @@ Bei normalen Fehlzeiten gibt es keinen Bonus und keinen Abzugsbonus.
 #### Geringe Fehlzeit
 Wenn ein Mitarbeiter 5 Tage oder weniger gefehlt hat gibt es einen Bonus, der anhand der performance berechnet wird (3 abstufungen).
 \
-Als standard Bonus Wert wird hier 100 verwendet.
+Als standard Bonus Wert wird hier 100 Euro verwendet.
 \
 Der Standard Faktor liegt hier bei 1.5.
 
@@ -57,7 +57,7 @@ Performance ab 0 und höher (Niedrige Performance) = Bonus * Faktor
 #### Hohe Fehlzeit
 Wenn ein Mitarbeiter 20 Tage oder mehr gefehlt hat, gibt es einen Bonusabzug (2 Abstufungen).
 
-Als standard Bonusabzugs Wert wird hier -100 verwendet.
+Als standard Bonusabzugs Wert wird hier -100 Euro verwendet.
 
 Fehltage ab 20 Tagen = Bonus(-100) / 2
 Fehltage ab 25 Tagen = Bonus 
@@ -66,7 +66,13 @@ Fehltage ab 25 Tagen = Bonus
 ### PerformanceBonus
 
 ### ProjectCompletionBonus
+Jeder Mitarbeiter, der ein Projekt vollendet hat, bekommt pro Projekt einen bonus von 5 euro.
 
+Beispiel:
+Bonus pro Projekt = 5
+Vollendete Projekte = 20
+
+Bonus Gesamt = Vollendete Projekte(20) * Bonus pro Projekt(5)
 ### SeniorityBonus
 
 ### TeamleaderBonus
