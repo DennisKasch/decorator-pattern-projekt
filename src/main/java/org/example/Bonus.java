@@ -9,7 +9,7 @@ public abstract class Bonus
         this.bonus = bonus;
     }
 
-    public abstract double bonusBerechnen();
+    public abstract double calculateBonus();
 
     //Method was added for TDD purposes.
     public double getBonus() {
