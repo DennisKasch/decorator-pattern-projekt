@@ -20,7 +20,15 @@ public class BonusCalculator {
 
     public double calculateBonus()
     {
-        employee.getCompletedProjects();
-        return 100;
+        double bonusSum = 0.;
+
+        ProjectCompletionBonus projectCompletionBonus =
+                new ProjectCompletionBonus(5, employee.getCompletedProjects());
+        DaysAbsentBonus daysAbsentBonus =
+                new DaysAbsentBonus(100, employee.getDaysAbsent(), employee.getPerformance());
+
+        bonusSum += projectCompletionBonus.calculateBonus();
+        bonusSum += daysAbsentBonus.calculateBonus();
+        return bonusSum;
     }
 }
