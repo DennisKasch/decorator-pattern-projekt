@@ -7,7 +7,7 @@ public class ProjectCompletionBonus extends Bonus{
     public ProjectCompletionBonus(double bonus, int completedProjects)
     {
         super(bonus);
-        this.completedProjects = 20;
+        this.completedProjects = completedProjects;
     }
 
     //Method was added for TDD purposes.
@@ -17,6 +17,6 @@ public class ProjectCompletionBonus extends Bonus{
 
     @Override
     public double calculateBonus() {
-        return 250;
+        return bonus * completedProjects;
     }
 }
