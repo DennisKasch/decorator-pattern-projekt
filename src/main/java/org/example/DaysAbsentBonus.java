@@ -36,6 +36,11 @@ public class DaysAbsentBonus extends Bonus {
             {
                 bonusSum += bonus * Math.pow(bonusFactor, 2);
             }
+            else
+            {
+                bonusSum += bonus * Math.pow(bonusFactor, 3);
+            }
+
         }
         return bonusSum;
     }
