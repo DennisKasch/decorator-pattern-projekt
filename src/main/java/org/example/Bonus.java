@@ -2,8 +2,17 @@ package org.example;
 
 public abstract class Bonus
 {
-    protected double bonus = 0;
+    protected double bonus;
+
+    public Bonus(double bonus)
+    {
+
+    }
 
     public abstract double bonusBerechnen();
 
+    //Method was added for TDD purposes.
+    public double getBonus() {
+        return bonus;
+    }
 }
