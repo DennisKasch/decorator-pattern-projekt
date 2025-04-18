@@ -6,7 +6,7 @@ public class ProjectCompletionBonus extends Bonus{
     private int completedProjects;
     public ProjectCompletionBonus(double bonus, int completedProjects)
     {
-        super(50);
+        super(bonus);
         this.completedProjects = 20;
     }
 
@@ -17,6 +17,6 @@ public class ProjectCompletionBonus extends Bonus{
 
     @Override
     public double calculateBonus() {
-        return 0;
+        return 250;
     }
 }
