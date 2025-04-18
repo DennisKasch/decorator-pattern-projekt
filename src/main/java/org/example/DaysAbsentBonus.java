@@ -43,7 +43,11 @@ public class DaysAbsentBonus extends Bonus {
         }
         else //high absent days
         {
-            if(daysAbsent >= 20)
+            if(daysAbsent >= 25)
+            {
+                bonusSum -= bonus;
+            }
+            else if(daysAbsent >= 20)
             {
                 bonusSum -= bonus * 0.5;
             }
