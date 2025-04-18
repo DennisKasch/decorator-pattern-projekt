@@ -43,4 +43,12 @@ class DaysAbsentBonusTest {
         assertThat(daysAbsentBonus.calculateBonus()).isEqualTo(expectedDaysAbsentBonus);
     }
 
+    @Test
+    void testCalculateBonus_HighDaysAbsent_20Days()
+    {
+        daysAbsentBonus = new DaysAbsentBonus(100, 20, 8);
+        double expectedDaysAbsentBonus = -50;
+        assertThat(daysAbsentBonus.calculateBonus()).isEqualTo(expectedDaysAbsentBonus);
+    }
+
 }
