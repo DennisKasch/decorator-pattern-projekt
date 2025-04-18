@@ -1,5 +1,6 @@
 package org.example;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
 
@@ -8,14 +9,21 @@ import static org.assertj.core.api.Assertions.*;
 
 class BonusCalculatorTest {
 
+    Employee employee;
+    BonusService bonusService;
+    BonusCalculator bonusCalculator;
+    @BeforeEach
+    void setUp()
+    {
+        employee = mock(Employee.class);
+        bonusService = mock(BonusService.class);
+
+        bonusCalculator = new BonusCalculator(employee, bonusService);
+    }
 
     @Test
     void testValidConstructor()
     {
-        Employee employee = mock(Employee.class);
-        BonusService bonusService = mock(BonusService.class);
-
-        BonusCalculator bonusCalculator = new BonusCalculator(employee, bonusService);
 
         assertThat(bonusCalculator.getBonusService()).isEqualTo(bonusService);
         assertThat(bonusCalculator.getEmployee()).isEqualTo(employee);
@@ -24,13 +32,8 @@ class BonusCalculatorTest {
     @Test
     void testCalculateBonus_ProjectCompletionBonus()
     {
-        Employee employee = mock(Employee.class);
-        BonusService bonusService = mock(BonusService.class);
-
         when(employee.getCompletedProjects()).thenReturn(20);
         when(employee.getDaysAbsent()).thenReturn(15);
-
-        BonusCalculator bonusCalculator = new BonusCalculator(employee, bonusService);
 
         assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
@@ -40,13 +43,8 @@ class BonusCalculatorTest {
     @Test
     void testCalculateBonus_DaysAbsentBonus_3DaysAbsent_LowPerformance()
     {
-        Employee employee = mock(Employee.class);
-        BonusService bonusService = mock(BonusService.class);
-
         employee.setDaysAbsent(3);
         employee.setPerformance(1);
-
-        BonusCalculator bonusCalculator = new BonusCalculator(employee, bonusService);
 
         assertThat(bonusCalculator.calculateBonus()).isEqualTo(150);
 
