@@ -23,35 +23,49 @@ public class DaysAbsentBonus extends Bonus {
     @Override
     public double calculateBonus() {
 
-        double bonusFactor = 1.5;
-        double bonusSum = 0.;
-
         if (daysAbsent <= 5) // low absent days
         {
-            if(performance <= 3) //low performance
-            {
-                bonusSum += bonus * bonusFactor;
-            }
-            else if(performance <= 7) //mid performance
-            {
-                bonusSum += bonus * Math.pow(bonusFactor, 2);
-            }
-            else
-            {
-                bonusSum += bonus * Math.pow(bonusFactor, 3);
-            }
+            return calculateBonusOnLowDaysAbsent();
         }
-        else //high absent days
+        else if(daysAbsent >= 20) //high absent days
         {
-            if(daysAbsent >= 25)
-            {
-                bonusSum -= bonus;
-            }
-            else if(daysAbsent >= 20)
-            {
-                bonusSum -= bonus * 0.5;
-            }
+            return calculateBonusOnHighDaysAbsent();
         }
+        return 0.;
+    }
+
+    private double calculateBonusOnLowDaysAbsent()
+    {
+        double bonusFactor = 1.5;
+        double bonusSum = 0;
+        if(performance <= 3) //low performance
+        {
+            bonusSum += bonus * bonusFactor;
+        }
+        else if(performance <= 7) //mid performance
+        {
+            bonusSum += bonus * Math.pow(bonusFactor, 2);
+        }
+        else
+        {
+            bonusSum += bonus * Math.pow(bonusFactor, 3);
+        }
+
+        return bonusSum;
+    }
+
+    private double calculateBonusOnHighDaysAbsent()
+    {
+        double bonusSum = 0;
+        if(daysAbsent >= 25)
+        {
+            bonusSum -= bonus;
+        }
+        else if(daysAbsent >= 20)
+        {
+            bonusSum -= bonus * 0.5;
+        }
+
         return bonusSum;
     }
 }
