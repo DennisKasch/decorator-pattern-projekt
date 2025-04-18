@@ -25,4 +25,12 @@ class ProjectCompletionBonusTest
 
         assertThat(projectCompletionBonus.calculateBonus()).isEqualTo(250);
     }
+
+    @Test
+    void testCalculateBonus_100CompletedProjects()
+    {
+        ProjectCompletionBonus projectCompletionBonus = new ProjectCompletionBonus(5, 100);
+
+        assertThat(projectCompletionBonus.calculateBonus()).isEqualTo(500);
+    }
 }
