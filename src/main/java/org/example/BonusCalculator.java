@@ -6,7 +6,8 @@ public class BonusCalculator {
 
     public BonusCalculator(Employee employee, BonusService bonusService)
     {
-
+        this.employee = employee;
+        this.bonusService = bonusService;
     }
 
     public Employee getEmployee() {
