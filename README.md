@@ -39,7 +39,29 @@ Es kann aber mal vorkommen das diese nicht immer 100% korrekt sind.
 
 ### BonusService
 
-### DaysAbsendBonus
+### DaysAbsentBonus
+Bei normalen Fehlzeiten gibt es keinen Bonus und keinen Abzugsbonus.
+#### Geringe Fehlzeit
+Wenn ein Mitarbeiter 5 Tage oder weniger gefehlt hat gibt es einen Bonus, der anhand der performance berechnet wird (3 abstufungen).
+\
+Als standard Bonus Wert wird hier 100 verwendet.
+\
+Der Standard Faktor liegt hier bei 1.5.
+
+Performance ab 8 und höher (Hohe Performance)     = Bonus(100) * Faktor(1.5)^3
+\
+Performance ab 4 und höher (Mittlere Performance) = Bonus * Faktor^2
+\
+Performance ab 0 und höher (Niedrige Performance) = Bonus * Faktor
+
+#### Hohe Fehlzeit
+Wenn ein Mitarbeiter 20 Tage oder mehr gefehlt hat, gibt es einen Bonusabzug (2 Abstufungen).
+
+Als standard Bonusabzugs Wert wird hier -100 verwendet.
+
+Fehltage ab 20 Tagen = Bonus(-100) / 2
+Fehltage ab 25 Tagen = Bonus 
+
 
 ### PerformanceBonus
 
