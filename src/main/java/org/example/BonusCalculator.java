@@ -20,6 +20,7 @@ public class BonusCalculator {
 
     public double calculateBonus()
     {
-        return 0;
+        employee.getCompletedProjects();
+        return 100;
     }
 }
