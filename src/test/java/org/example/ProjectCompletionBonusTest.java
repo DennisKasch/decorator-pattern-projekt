@@ -7,18 +7,14 @@ import org.junit.jupiter.api.Test;
 
 class ProjectCompletionBonusTest
 {
-
-    private ProjectCompletionBonus projectCompletionBonus;
-
-    @BeforeEach
-    void setUp()
-    {
-        projectCompletionBonus = new ProjectCompletionBonus(100,20);
-    }
-
     @Test
     void testValidConstructor()
     {
-        assertThat(projectCompletionBonus.getBonus()).isEqualTo(100);
+        double bonusValue = 50;
+        int completedProjectsValue = 20;
+        ProjectCompletionBonus projectCompletionBonus = new ProjectCompletionBonus(bonusValue, completedProjectsValue);
+
+        assertThat(projectCompletionBonus.getBonus()).isEqualTo(bonusValue);
+        assertThat(projectCompletionBonus.getCompletedProjects()).isEqualTo(completedProjectsValue);
     }
 }
