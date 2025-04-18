@@ -40,7 +40,13 @@ public class DaysAbsentBonus extends Bonus {
             {
                 bonusSum += bonus * Math.pow(bonusFactor, 3);
             }
-
+        }
+        else //high absent days
+        {
+            if(daysAbsent >= 20)
+            {
+                bonusSum -= bonus * 0.5;
+            }
         }
         return bonusSum;
     }
