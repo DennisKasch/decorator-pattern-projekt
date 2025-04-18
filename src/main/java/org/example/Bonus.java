@@ -6,7 +6,7 @@ public abstract class Bonus
 
     public Bonus(double bonus)
     {
-        this.bonus = 10.;
+        this.bonus = bonus;
     }
 
     public abstract double bonusBerechnen();
