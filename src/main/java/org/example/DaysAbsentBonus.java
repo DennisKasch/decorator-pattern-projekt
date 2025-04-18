@@ -27,11 +27,10 @@ public class DaysAbsentBonus extends Bonus {
         {
             return calculateBonusOnLowDaysAbsent();
         }
-        else if(daysAbsent >= 20) //high absent days
+        else //high absent days
         {
             return calculateBonusOnHighDaysAbsent();
         }
-        return 0.;
     }
 
     private double calculateBonusOnLowDaysAbsent()
