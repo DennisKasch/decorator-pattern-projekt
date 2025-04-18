@@ -31,7 +31,7 @@ public class DaysAbsentBonus extends Bonus {
         {
             return calculateBonusOnHighDaysAbsent();
         }
-        return 0.;
+        return bonus;
     }
 
     private double calculateBonusOnLowDaysAbsent()
