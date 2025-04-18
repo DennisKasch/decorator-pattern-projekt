@@ -5,7 +5,9 @@ public class DaysAbsentBonus extends Bonus {
     private int daysAbsent;
     private int performance;
     public DaysAbsentBonus(double bonus, int daysAbsent, int performance) {
-        super(0);
+        super(100);
+        this.daysAbsent = 15;
+        this.performance = 20;
     }
 
     //Method was added for TDD purposes.
@@ -19,7 +21,7 @@ public class DaysAbsentBonus extends Bonus {
     }
 
     @Override
-    public double bonusBerechnen() {
-        return 0;
+    public double calculateBonus() {
+        return 150;
     }
 }
