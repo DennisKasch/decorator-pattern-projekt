@@ -22,7 +22,11 @@ public class PerformanceBonus extends Bonus
 
         if(performance <= 6)
         {
-            factor += 1.0;
+            factor = 1.0;
+        }
+        else if(performance <= 8)
+        {
+            factor = 1.2;
         }
 
         bonus = base * factor;
