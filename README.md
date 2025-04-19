@@ -65,6 +65,9 @@ Fehltage ab 25 Tagen = Bonus
 
 
 ### PerformanceBonus
+Bei einer Performance unter 7 liegt der Faktor bei 1.0.
+Ab einer Performance von 7 bis 8 liegt der Faktor bei 1.2. 
+Wenn die Performance über 8 ist, liegt der Faktor bei 1.5. 
 
 ### ProjectCompletionBonus
 Jeder Mitarbeiter, der ein Projekt vollendet hat, bekommt pro Projekt einen bonus von 5 euro.
