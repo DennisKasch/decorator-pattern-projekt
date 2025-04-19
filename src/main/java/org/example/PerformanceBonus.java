@@ -28,6 +28,10 @@ public class PerformanceBonus extends Bonus
         {
             factor = 1.2;
         }
+        else
+        {
+            factor = 1.5;
+        }
 
         bonus = base * factor;
         return  bonus;
