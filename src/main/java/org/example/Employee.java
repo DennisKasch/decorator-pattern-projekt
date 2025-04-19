@@ -19,6 +19,8 @@ public class Employee {
         this.completedProjects = completedProjects;
         this.daysAbsent = daysAbsent;
         this.isTeamleader = isTeamleader;
+
+        checkValidValues(companyAffiliation, performance, completedProjects, daysAbsent);
     }
     public String getFirstname()
     {
@@ -48,6 +50,8 @@ public class Employee {
     public void setCompanyAffiliation(int companyAffiliation)
     {
         this.companyAffiliation = companyAffiliation;
+
+        checkValidValues(companyAffiliation, 0, 0,0);
     }
 
     public int getPerformance()
@@ -58,6 +62,7 @@ public class Employee {
     public void setPerformance(int performance)
     {
         this.performance = performance;
+        checkValidValues(0, performance, 0, 0);
     }
 
     public int getCompletedProjects()
@@ -68,6 +73,7 @@ public class Employee {
     public void setCompletedProjects(int completedProjects)
     {
         this.completedProjects = completedProjects;
+        checkValidValues(0, 0, completedProjects, 0);
     }
 
     public int getDaysAbsent()
@@ -78,6 +84,7 @@ public class Employee {
     public void setDaysAbsent(int daysAbsent)
     {
         this.daysAbsent = daysAbsent;
+        checkValidValues(0, 0, 0, daysAbsent);
     }
 
     public boolean isTeamleader()
