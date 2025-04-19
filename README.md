@@ -36,6 +36,7 @@ Es kann aber mal vorkommen das diese nicht immer 100% korrekt sind.
 ## Boni
 
 ### BaseBonus
+Der Grundbonus liegt bei 1000 Euro.
 
 ### BonusService
 
