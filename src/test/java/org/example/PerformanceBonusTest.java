@@ -30,4 +30,16 @@ class PerformanceBonusTest
 
         assertThat(result).isEqualTo(1200.0);
     }
+
+    @Test
+    void shouldApplyFactor1_5ForPerformanceAbove8()
+    {
+        Employee employee = new Employee("Nora", "Miller", 2, 9, 6, 0, false);
+        Bonus baseBonus = new BaseBonus();
+        Bonus performanceBonus = new PerformanceBonus(baseBonus, employee);
+
+        double result = performanceBonus.calculateBonus();
+
+        assertThat(result).isEqualTo(1500.0);
+    }
 }
