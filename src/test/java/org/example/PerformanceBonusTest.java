@@ -18,4 +18,16 @@ class PerformanceBonusTest
 
         assertThat(result).isEqualTo(1000.0);
     }
+
+    @Test
+    void shouldApplyFactor1_2ForPerformanceBetween7And8()
+    {
+        Employee employee = new Employee("Eva", "Schmidt", 4, 7, 10, 3, false);
+        Bonus baseBonus = new BaseBonus();
+        Bonus performanceBonus = new PerformanceBonus(baseBonus, employee);
+
+        double result = performanceBonus.calculateBonus();
+
+        assertThat(result).isEqualTo(1200.0);
+    }
 }
