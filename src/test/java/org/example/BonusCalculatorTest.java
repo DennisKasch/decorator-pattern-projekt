@@ -24,7 +24,6 @@ class BonusCalculatorTest {
     @Test
     void testValidConstructor()
     {
-
         assertThat(bonusCalculator.getBonusService()).isEqualTo(bonusService);
         assertThat(bonusCalculator.getEmployee()).isEqualTo(employee);
     }
@@ -32,23 +31,27 @@ class BonusCalculatorTest {
     @Test
     void testCalculateBonus_ProjectCompletionBonus()
     {
-        when(employee.getCompletedProjects()).thenReturn(20);
-        when(employee.getDaysAbsent()).thenReturn(15);
+        ProjectCompletionBonus projectCompletionBonus = mock(ProjectCompletionBonus.class);
+        bonusCalculator.setProjectCompletionBonus(projectCompletionBonus);
+        when(projectCompletionBonus.calculateBonus()).thenReturn(100.);
 
         assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
         verify(employee, times(1)).getCompletedProjects();
+        verify(projectCompletionBonus, times(1)).calculateBonus();
     }
 
     @Test
-    void testCalculateBonus_DaysAbsentBonus_3DaysAbsent_LowPerformance()
+    void testCalculateBonus_DaysAbsentBonus()
     {
-        employee.setDaysAbsent(3);
-        employee.setPerformance(1);
+        DaysAbsentBonus daysAbsentBonus = mock(DaysAbsentBonus.class);
+        bonusCalculator.setDaysAbsentBonus(daysAbsentBonus);
+        when(daysAbsentBonus.calculateBonus()).thenReturn(100.);
 
-        assertThat(bonusCalculator.calculateBonus()).isEqualTo(150);
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
         verify(employee, times(1)).getDaysAbsent();
         verify(employee, times(1)).getPerformance();
+        verify(daysAbsentBonus, times(1)).calculateBonus();
     }
 }

@@ -4,11 +4,34 @@ public class BonusCalculator {
     private Employee employee;
     private BonusService bonusService;
 
+    private BaseBonus baseBonus;
+    private DaysAbsentBonus daysAbsentBonus;
+    private PerformanceBonus performanceBonus;
+    private ProjectCompletionBonus projectCompletionBonus;
+    private SeniorityBonus seniorityBonus;
+    private TeamleaderBonus teamleaderBonus;
+
     public BonusCalculator(Employee employee, BonusService bonusService)
     {
         this.employee = employee;
         this.bonusService = bonusService;
+
+        baseBonus = new BaseBonus();
+        daysAbsentBonus = new DaysAbsentBonus(0, employee.getDaysAbsent(), employee.getPerformance());
+        projectCompletionBonus = new ProjectCompletionBonus(0, employee.getCompletedProjects());
+        seniorityBonus = new SeniorityBonus(0,0);
+        teamleaderBonus = new TeamleaderBonus(0, false);
     }
+
+    public double calculateBonus()
+    {
+        double bonusSum = 0.;
+
+        bonusSum += projectCompletionBonus.calculateBonus();
+        bonusSum += daysAbsentBonus.calculateBonus();
+        return bonusSum;
+    }
+
 
     public Employee getEmployee() {
         return employee;
@@ -18,17 +41,27 @@ public class BonusCalculator {
         return bonusService;
     }
 
-    public double calculateBonus()
-    {
-        double bonusSum = 0.;
+    public void setBaseBonus(BaseBonus baseBonus) {
+        this.baseBonus = baseBonus;
+    }
 
-        ProjectCompletionBonus projectCompletionBonus =
-                new ProjectCompletionBonus(5, employee.getCompletedProjects());
-        DaysAbsentBonus daysAbsentBonus =
-                new DaysAbsentBonus(100, employee.getDaysAbsent(), employee.getPerformance());
+    public void setDaysAbsentBonus(DaysAbsentBonus daysAbsentBonus) {
+        this.daysAbsentBonus = daysAbsentBonus;
+    }
 
-        bonusSum += projectCompletionBonus.calculateBonus();
-        bonusSum += daysAbsentBonus.calculateBonus();
-        return bonusSum;
+    public void setPerformanceBonus(PerformanceBonus performanceBonus) {
+        this.performanceBonus = performanceBonus;
+    }
+
+    public void setProjectCompletionBonus(ProjectCompletionBonus projectCompletionBonus) {
+        this.projectCompletionBonus = projectCompletionBonus;
+    }
+
+    public void setSeniorityBonus(SeniorityBonus seniorityBonus) {
+        this.seniorityBonus = seniorityBonus;
+    }
+
+    public void setTeamleaderBonus(TeamleaderBonus teamleaderBonus) {
+        this.teamleaderBonus = teamleaderBonus;
     }
 }
