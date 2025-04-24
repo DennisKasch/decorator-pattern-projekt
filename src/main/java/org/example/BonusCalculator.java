@@ -16,7 +16,7 @@ public class BonusCalculator {
         this.employee = employee;
         this.bonusService = bonusService;
 
-        baseBonus = new BaseBonus();
+        baseBonus = new BaseBonus(0);
         daysAbsentBonus = new DaysAbsentBonus(0, employee.getDaysAbsent(), employee.getPerformance());
         projectCompletionBonus = new ProjectCompletionBonus(0, employee.getCompletedProjects());
         seniorityBonus = new SeniorityBonus(0, employee.getCompanyAffiliation());
