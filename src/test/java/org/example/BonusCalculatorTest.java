@@ -54,4 +54,17 @@ class BonusCalculatorTest {
         verify(employee, times(1)).getPerformance();
         verify(daysAbsentBonus, times(1)).calculateBonus();
     }
+
+    @Test
+    void testCalculateBonus_SeniorityBonus()
+    {
+        SeniorityBonus seniorityBonus = mock(SeniorityBonus.class);
+        bonusCalculator.setSeniorityBonus(seniorityBonus);
+        when(seniorityBonus.calculateBonus()).thenReturn(100.);
+
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
+
+        verify(employee, times(1)).getCompanyAffiliation();
+        verify(seniorityBonus, times(1)).calculateBonus();
+    }
 }
