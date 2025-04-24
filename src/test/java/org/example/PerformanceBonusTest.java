@@ -20,4 +20,11 @@ class PerformanceBonusTest
         PerformanceBonus medium = new PerformanceBonus(1000, 5);
         assertThat(medium.calculateBonus()).isEqualTo(1000);
     }
+
+    @Test
+    void shouldIncreaseBonusIfPerformanceHigh()
+    {
+        PerformanceBonus high = new PerformanceBonus(1000,9);
+        assertThat(high.calculateBonus()).isEqualTo(1200);
+    }
 }
