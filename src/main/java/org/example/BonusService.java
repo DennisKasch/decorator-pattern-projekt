@@ -3,14 +3,13 @@ package org.example;
 public class BonusService {
     private double maximumValue;
     private double minimumValue;
-    private double bonusSum;
 
-    public BonusService(double maximumValue, double minimumValue, double bonusSum)
+    public BonusService(double maximumValue, double minimumValue)
     {
 
     }
 
-    public double calculateCorrectBonus()
+    public double calculateCorrectBonus(double bonusSum)
     {
         return 0;
     }
