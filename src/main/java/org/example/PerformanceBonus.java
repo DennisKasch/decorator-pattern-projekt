@@ -20,6 +20,10 @@ public class PerformanceBonus extends Bonus
         {
             bonus = bonus * 1;
         }
+        else
+        {
+            bonus = bonus * 1.2;
+        }
         return bonus;
     }
 }
