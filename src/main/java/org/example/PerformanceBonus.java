@@ -2,7 +2,7 @@ package org.example;
 
 public class PerformanceBonus extends Bonus
 {
-    private final int performance;
+    private int performance;
     public PerformanceBonus(double bonus, int performance)
     {
         super(bonus);
