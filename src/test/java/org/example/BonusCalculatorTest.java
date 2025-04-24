@@ -67,4 +67,17 @@ class BonusCalculatorTest {
         verify(employee, times(1)).getCompanyAffiliation();
         verify(seniorityBonus, times(1)).calculateBonus();
     }
+
+    @Test
+    void testCalculateBonus_TeamLeaderBonus()
+    {
+        TeamleaderBonus teamleaderBonus = mock(TeamleaderBonus.class);
+        bonusCalculator.setTeamleaderBonus(teamleaderBonus);
+        when(teamleaderBonus.calculateBonus()).thenReturn(100.);
+
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100.);
+
+        verify(employee, times(1)).isTeamleader();
+        verify(teamleaderBonus, times(1)).calculateBonus();
+    }
 }
