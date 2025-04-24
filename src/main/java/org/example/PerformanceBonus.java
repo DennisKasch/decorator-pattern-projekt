@@ -12,6 +12,14 @@ public class PerformanceBonus extends Bonus
     @Override
     public double calculateBonus()
     {
-        return bonus * 0.8;
+        if(performance <= 3)
+        {
+            bonus =  bonus * 0.8;
+        }
+        else if (performance <= 7)
+        {
+
+        }
+        return bonus;
     }
 }
