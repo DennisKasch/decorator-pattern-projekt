@@ -7,4 +7,10 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class PerformanceBonusTest
 {
+    @Test
+    void shouldReduceBonusIfPerformanceLow()
+    {
+        PerformanceBonus low = new PerformanceBonus(1000, 2);
+        assertThat(low.calculateBonus()).isEqualTo(800);
+    }
 }
