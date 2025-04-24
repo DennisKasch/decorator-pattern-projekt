@@ -2,7 +2,6 @@ package org.example;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-import org.mockito.Mockito;
 
 import static org.mockito.Mockito.*;
 import static org.assertj.core.api.Assertions.*;
@@ -75,7 +74,7 @@ class BonusCalculatorTest {
         bonusCalculator.setTeamleaderBonus(teamleaderBonus);
         when(teamleaderBonus.calculateBonus()).thenReturn(100.);
 
-        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100.);
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
         verify(employee, times(1)).isTeamleader();
         verify(teamleaderBonus, times(1)).calculateBonus();
@@ -86,7 +85,7 @@ class BonusCalculatorTest {
     {
         when(bonusService.calculateCorrectBonus(0.)).thenReturn(50.);
 
-        assertThat(bonusCalculator.calculateBonus()).isEqualTo(50);
+        assertThat(bonusCalculator.getCorrectBonus()).isEqualTo(50);
 
         verify(bonusService, times(1)).calculateCorrectBonus(0.);
     }

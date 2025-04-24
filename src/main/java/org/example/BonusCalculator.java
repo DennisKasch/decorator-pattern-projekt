@@ -34,6 +34,11 @@ public class BonusCalculator {
         return bonusSum;
     }
 
+    public double getCorrectBonus()
+    {
+        return bonusService.calculateCorrectBonus(calculateBonus());
+    }
+
 
     public Employee getEmployee() {
         return employee;
