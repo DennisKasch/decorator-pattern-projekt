@@ -18,7 +18,7 @@ public class PerformanceBonus extends Bonus
         }
         else if (performance <= 7)
         {
-
+            bonus = bonus * 1;
         }
         return bonus;
     }
