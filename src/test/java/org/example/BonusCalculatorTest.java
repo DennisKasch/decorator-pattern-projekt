@@ -80,4 +80,14 @@ class BonusCalculatorTest {
         verify(employee, times(1)).isTeamleader();
         verify(teamleaderBonus, times(1)).calculateBonus();
     }
+
+    @Test
+    void testCalculateBonus_BonusService()
+    {
+        when(bonusService.calculateCorrectBonus(0.)).thenReturn(50.);
+
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(50);
+
+        verify(bonusService, times(1)).calculateCorrectBonus(0.);
+    }
 }
