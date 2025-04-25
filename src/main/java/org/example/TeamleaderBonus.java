@@ -2,8 +2,11 @@ package org.example;
 
 public class TeamleaderBonus extends Bonus{
 
-    private double bonus;
     private boolean teamLeader;
+
+    public boolean isTeamLeader() {
+        return teamLeader;
+    }
 
     public TeamleaderBonus(double bonus, boolean teamLeader)
     {
