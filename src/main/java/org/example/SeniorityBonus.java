@@ -6,7 +6,8 @@ public class SeniorityBonus extends Bonus {
 
     public SeniorityBonus(double bonus, int companyAffiliation)
     {
-        super(0);
+        super(bonus);
+        this.companyAffiliation = companyAffiliation;
     }
 
     public int getCompanyAffiliation() {
