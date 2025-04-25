@@ -23,6 +23,9 @@ public class SeniorityBonus extends Bonus {
         if(companyAffiliation == 5){
             return 100;
         }
+        if(companyAffiliation == 10){
+            return 200;
+        }
         else {
             return 0;
         }
