@@ -17,6 +17,13 @@ class SeniorityBonusTest {
     }
 
     @Test
+    void testCalculateBonus_ZeroYearAffiliation() {
+        seniorityBonus = new SeniorityBonus(0, 0);
+        int expectedBonus = 0;
+        assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
+    }
+
+    @Test
     void testCalculateBonus_FiveYearAffiliation() {
         seniorityBonus = new SeniorityBonus(100, 5);
         int expectedBonus = 100;

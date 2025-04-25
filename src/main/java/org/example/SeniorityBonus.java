@@ -27,7 +27,7 @@ public class SeniorityBonus extends Bonus {
             return 200;
         }
         else {
-            return 0;
+            return -1;
         }
     }
 }
