@@ -6,7 +6,8 @@ public class BonusService {
 
     public BonusService(double minimumValue, double maximumValue)
     {
-
+        this.minimumValue = minimumValue;
+        this.maximumValue = maximumValue;
     }
 
     public double getMinimumValue() {
