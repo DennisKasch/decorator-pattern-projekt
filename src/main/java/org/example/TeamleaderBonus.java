@@ -15,6 +15,9 @@ public class TeamleaderBonus extends Bonus{
     }
     @Override
     public double calculateBonus() {
-        return 0;
+        if(teamLeader) {
+            return 100;
+        }
+        return -1;
     }
 }
