@@ -10,7 +10,8 @@ public class TeamleaderBonus extends Bonus{
 
     public TeamleaderBonus(double bonus, boolean teamLeader)
     {
-        super(0);
+        super(bonus);
+        this.teamLeader = teamLeader;
     }
     @Override
     public double calculateBonus() {
