@@ -78,5 +78,8 @@ Vollendete Projekte = 20
 
 Bonus Gesamt = Vollendete Projekte(20) * Bonus pro Projekt(5)
 ### SeniorityBonus
+Wenn ein Mitarbeiter 5 Jahre oder mehr im Unternehmen ist, bekommt er einen Bonus von 100 euro.
+Wenn ein Mitarbeiter 10 Jahre oder mehr im Unternehmen ist, bekommt er einen Bonus von 200 euro.
 
 ### TeamleaderBonus
+Wenn ein Mitarbeiter auch Teamleiter ist, bekommt er 100 euro extra. 
