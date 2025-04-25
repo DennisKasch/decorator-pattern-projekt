@@ -101,4 +101,17 @@ class BonusCalculatorTest {
 
         verify(baseBonus, times(1)).calculateBonus();
     }
+
+    @Test
+    void testCalcuateBonus_PerformanceBonus()
+    {
+        PerformanceBonus performanceBonus = mock(PerformanceBonus.class);
+        bonusCalculator.setPerformanceBonus(performanceBonus);
+        when(performanceBonus.calculateBonus()).thenReturn(100.);
+
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
+
+        verify(employee, times(1)).getPerformance();
+        verify(performanceBonus, times(1)).calculateBonus();
+    }
 }
