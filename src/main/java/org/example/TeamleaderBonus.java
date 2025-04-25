@@ -18,6 +18,8 @@ public class TeamleaderBonus extends Bonus{
         if(teamLeader) {
             return 100;
         }
-        return -1;
+        else {
+            return 0;
+        }
     }
 }
