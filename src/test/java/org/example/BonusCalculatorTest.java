@@ -50,7 +50,7 @@ class BonusCalculatorTest {
         assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
         verify(employee, times(1)).getDaysAbsent();
-        verify(employee, times(1)).getPerformance();
+        verify(employee, times(2)).getPerformance();
         verify(daysAbsentBonus, times(1)).calculateBonus();
     }
 
@@ -111,7 +111,7 @@ class BonusCalculatorTest {
 
         assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
 
-        verify(employee, times(1)).getPerformance();
+        verify(employee, times(2)).getPerformance();
         verify(performanceBonus, times(1)).calculateBonus();
     }
 }

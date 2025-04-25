@@ -21,6 +21,7 @@ public class BonusCalculator {
         projectCompletionBonus = new ProjectCompletionBonus(0, employee.getCompletedProjects());
         seniorityBonus = new SeniorityBonus(0, employee.getCompanyAffiliation());
         teamleaderBonus = new TeamleaderBonus(0, employee.isTeamleader());
+        performanceBonus = new PerformanceBonus(0, employee.getPerformance());
     }
 
     public double calculateBonus()
@@ -28,6 +29,7 @@ public class BonusCalculator {
         double bonusSum = 0.;
 
         bonusSum += baseBonus.calculateBonus();
+        bonusSum += performanceBonus.calculateBonus();
         bonusSum += projectCompletionBonus.calculateBonus();
         bonusSum += daysAbsentBonus.calculateBonus();
         bonusSum += seniorityBonus.calculateBonus();
