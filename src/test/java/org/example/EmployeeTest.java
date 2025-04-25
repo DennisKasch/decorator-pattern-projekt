@@ -53,8 +53,8 @@ class EmployeeTest
     @Test
     void testGetDaysAbsent()
     {
-        employee.setDaysAbsent(100);
-        assertThat(employee.getDaysAbsent()).isEqualTo(100);
+        employee.setDaysAbsent(20);
+        assertThat(employee.getDaysAbsent()).isEqualTo(20);
     }
 
     @Test
@@ -102,8 +102,8 @@ class EmployeeTest
     @Test
     void testSetDaysAbsent()
     {
-        employee.setDaysAbsent(50);
-        assertThat(employee.getDaysAbsent()).isEqualTo(50);
+        employee.setDaysAbsent(10);
+        assertThat(employee.getDaysAbsent()).isEqualTo(10);
     }
 
     @Test
