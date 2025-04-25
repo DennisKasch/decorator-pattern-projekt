@@ -15,4 +15,11 @@ class TeamleaderBonusTest {
         assertThat(teamleaderBonus.getBonus()).isEqualTo(100);
         assertThat(teamleaderBonus.isTeamLeader()).isEqualTo(true);
     }
+
+    @Test
+    void testCalculateBonus_isTeamleader() {
+        teamleaderBonus = new TeamleaderBonus(100, true);
+        int expectedBonus = 100;
+        assertThat(teamleaderBonus.calculateBonus()).isEqualTo(expectedBonus);
+    }
 }
