@@ -81,12 +81,24 @@ class BonusCalculatorTest {
     }
 
     @Test
-    void testCalculateBonus_BonusService()
+    void testGetCorrectBonus_BonusService()
     {
         when(bonusService.calculateCorrectBonus(0.)).thenReturn(50.);
 
         assertThat(bonusCalculator.getCorrectBonus()).isEqualTo(50);
 
         verify(bonusService, times(1)).calculateCorrectBonus(0.);
+    }
+
+    @Test
+    void testCalculateBonus_BaseBonus()
+    {
+        BaseBonus baseBonus = mock(BaseBonus.class);
+        bonusCalculator.setBaseBonus(baseBonus);
+        when(baseBonus.calculateBonus()).thenReturn(100.);
+
+        assertThat(bonusCalculator.calculateBonus()).isEqualTo(100);
+
+        verify(baseBonus, times(1)).calculateBonus();
     }
 }
