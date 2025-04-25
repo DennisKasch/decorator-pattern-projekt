@@ -22,5 +22,4 @@ class SeniorityBonusTest {
         int expectedBonus = 100;
         assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
     }
-
 }
