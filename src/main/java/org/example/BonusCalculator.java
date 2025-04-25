@@ -27,6 +27,7 @@ public class BonusCalculator {
     {
         double bonusSum = 0.;
 
+        bonusSum += baseBonus.calculateBonus();
         bonusSum += projectCompletionBonus.calculateBonus();
         bonusSum += daysAbsentBonus.calculateBonus();
         bonusSum += seniorityBonus.calculateBonus();
