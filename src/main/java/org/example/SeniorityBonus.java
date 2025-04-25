@@ -14,10 +14,6 @@ public class SeniorityBonus extends Bonus {
         return companyAffiliation;
     }
 
-    public void setCompanyAffiliation(int companyAffiliation) {
-        this.companyAffiliation = companyAffiliation;
-    }
-
     @Override
     public double calculateBonus() {
         if(companyAffiliation >= 10) {
