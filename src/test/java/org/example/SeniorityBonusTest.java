@@ -10,9 +10,17 @@ class SeniorityBonusTest {
     private SeniorityBonus seniorityBonus;
     @Test
     void testValidConstructor() {
-        seniorityBonus = new SeniorityBonus(20, 5);
+        seniorityBonus = new SeniorityBonus(100, 5);
 
-        assertThat(seniorityBonus.getBonus()).isEqualTo(20);
+        assertThat(seniorityBonus.getBonus()).isEqualTo(100);
         assertThat(seniorityBonus.getCompanyAffiliation()).isEqualTo(5);
     }
+
+    @Test
+    void testCalculateBonus_FiveYearAffiliation() {
+        seniorityBonus = new SeniorityBonus(100, 5);
+        int expectedBonus = 100;
+        assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
+    }
+
 }
