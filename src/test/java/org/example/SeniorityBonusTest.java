@@ -43,4 +43,11 @@ class SeniorityBonusTest {
         int expectedBonus = 200;
         assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
     }
+
+    @Test
+    void testCalculateBonus_ElevenYearAffiliation() {
+        seniorityBonus = new SeniorityBonus(200, 11);
+        int expectedBonus = 200;
+        assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
+    }
 }
