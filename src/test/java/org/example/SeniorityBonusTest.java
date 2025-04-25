@@ -17,16 +17,16 @@ class SeniorityBonusTest {
     }
 
     @Test
-    void testCalculateBonus_OneYearAffiliation() {
-        seniorityBonus = new SeniorityBonus(0, 1);
-        int expectedBonus = 0;
+    void testCalculateBonus_FiveYearAffiliation() {
+        seniorityBonus = new SeniorityBonus(100, 5);
+        int expectedBonus = 100;
         assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
     }
 
     @Test
-    void testCalculateBonus_FiveYearAffiliation() {
-        seniorityBonus = new SeniorityBonus(100, 5);
-        int expectedBonus = 100;
+    void testCalculateBonus_TenYearAffiliation() {
+        seniorityBonus = new SeniorityBonus(200, 10);
+        int expectedBonus = 200;
         assertThat(seniorityBonus.calculateBonus()).isEqualTo(expectedBonus);
     }
 }
