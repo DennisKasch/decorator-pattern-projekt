@@ -20,6 +20,11 @@ public class SeniorityBonus extends Bonus {
 
     @Override
     public double calculateBonus() {
-        return 0;
+        if(companyAffiliation == 5) {
+            return 100;
+        }
+        else {
+            return 0;
+        }
     }
 }
