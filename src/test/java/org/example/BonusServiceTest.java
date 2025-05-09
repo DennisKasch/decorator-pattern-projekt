@@ -39,4 +39,12 @@ class BonusServiceTest {
 
         assertThat(bonusService.calculateCorrectBonus(1300)).isEqualTo(expectedBonus);
     }
+
+    @Test
+    void testCorrectCalculateBonus_UnderMaximumBonus() {
+        bonusService = new BonusService(900, 0);
+        int expectedBonus = 900;
+
+        assertThat(bonusService.calculateCorrectBonus(900)).isEqualTo(expectedBonus);
+    }
 }
