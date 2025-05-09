@@ -21,6 +21,8 @@ public class BonusService {
     public double calculateCorrectBonus(double bonusSum) {
         if(bonusSum == 1200) {
             return 1200;
+        } else if (bonusSum > 1200) {
+            return 1200;
         }
 
         return 0;
