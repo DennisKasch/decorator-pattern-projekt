@@ -23,6 +23,8 @@ public class BonusService {
             return 1200;
         } else if (bonusSum > 1200) {
             return 1200;
+        } else if (bonusSum < 1200) {
+            return bonusSum;
         }
 
         return 0;
