@@ -6,8 +6,8 @@ import static org.assertj.core.api.Assertions.assertThat;
 import static org.junit.jupiter.api.Assertions.*;
 
 class SeniorityBonusTest {
-
     private SeniorityBonus seniorityBonus;
+
     @Test
     void testValidConstructor() {
         seniorityBonus = new SeniorityBonus(100, 5);
