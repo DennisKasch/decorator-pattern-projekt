@@ -1,13 +1,11 @@
 package org.example;
 
 public class BonusService {
-    private double minimumValue;
-    private double maximumValue;
+    private final double minimumValue = 0;
+    private final double maximumValue = 1500;
 
-    public BonusService(double minimumValue, double maximumValue)
+    public BonusService()
     {
-        this.minimumValue = minimumValue;
-        this.maximumValue = maximumValue;
     }
 
     public double getMinimumValue() {
@@ -18,15 +16,13 @@ public class BonusService {
         return maximumValue;
     }
 
-    public double calculateCorrectBonus(double bonusSum) {
-        if(bonusSum == 1200) {
-            return 1200;
-        } else if (bonusSum > 1200) {
-            return 1200;
-        } else if (bonusSum < 1200) {
+    public double calculateCorrectBonus(double bonusSum) throws IllegalArgumentException {
+        if(bonusSum <= maximumValue) {
             return bonusSum;
+        } else if (bonusSum > maximumValue) {
+            return maximumValue;
         }
 
-        return 0;
+        return -1;
     }
 }
