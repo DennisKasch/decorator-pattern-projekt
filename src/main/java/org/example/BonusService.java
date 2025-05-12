@@ -16,10 +16,14 @@ public class BonusService {
         return maximumValue;
     }
 
-    public double calculateCorrectBonus(double bonusSum) throws IllegalArgumentException {
-        if(bonusSum <= maximumValue) {
+    public double calculateCorrectBonus(double bonusSum) {
+        if (bonusSum < minimumValue) {
+            return minimumValue;
+        }
+        else if(bonusSum <= maximumValue) {
             return bonusSum;
-        } else if (bonusSum > maximumValue) {
+        }
+        else if(bonusSum > maximumValue) {
             return maximumValue;
         }
 
