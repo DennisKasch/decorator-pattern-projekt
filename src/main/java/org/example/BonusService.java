@@ -23,10 +23,8 @@ public class BonusService {
         else if(bonusSum <= maximumValue) {
             return bonusSum;
         }
-        else if(bonusSum > maximumValue) {
+        else {
             return maximumValue;
         }
-
-        return -1;
     }
 }

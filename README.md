@@ -39,6 +39,9 @@ Es kann aber mal vorkommen das diese nicht immer 100% korrekt sind.
 Der Grundbonus liegt bei 1000 Euro.
 
 ### BonusService
+Im BonusService ist der Maximalbonus auf 1500 und Minimalbonus auf 0 festgelegt.
+Wird einer dieser Werte unter bzw. überschritten gibt der BonusService, je nach
+fall den Maximalbonus oder Minimalbonus zurück.
 
 ### DaysAbsentBonus
 Bei normalen Fehlzeiten gibt es keinen Bonus und keinen Abzugsbonus.
@@ -62,7 +65,6 @@ Als standard Bonusabzugs Wert wird hier -100 Euro verwendet.
 
 Fehltage ab 20 Tagen = Bonus(-100) / 2
 Fehltage ab 25 Tagen = Bonus 
-
 
 ### PerformanceBonus
 Bei einer Performance unter 7 liegt der Faktor bei 1.0.
