@@ -8,7 +8,6 @@ Da keine Versionierung angegeben wurde haben wir uns für eine Eigene entschiede
 - Grüner-Test endet mit einer 2
 - Refactoring endet mit einer 3 oder höher.
 
-
 ##### Beispielsweise:
 
 Erster Test
@@ -45,6 +44,7 @@ fall den Maximalbonus oder Minimalbonus zurück.
 
 ### DaysAbsentBonus
 Bei normalen Fehlzeiten gibt es keinen Bonus und keinen Abzugsbonus.
+
 #### Geringe Fehlzeit
 Wenn ein Mitarbeiter 5 Tage oder weniger gefehlt hat gibt es einen Bonus, der anhand der performance berechnet wird (3 abstufungen).
 \
@@ -79,6 +79,7 @@ Bonus pro Projekt = 5
 Vollendete Projekte = 20
 
 Bonus Gesamt = Vollendete Projekte(20) * Bonus pro Projekt(5)
+
 ### SeniorityBonus
 Wenn ein Mitarbeiter 5 Jahre oder mehr im Unternehmen ist, bekommt er einen Bonus von 100 euro.
 Wenn ein Mitarbeiter 10 Jahre oder mehr im Unternehmen ist, bekommt er einen Bonus von 200 euro.
